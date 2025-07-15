@@ -15,8 +15,8 @@ def test_get_pets_by_status_sold():
         f"{BASE_URL}/pet/findByStatus", params={"status":"sold"}
     )
     assert response.status_code == 200
-    
-    
+
+
 def test_get_pets_by_status_pending():
     response = requests.get(
         f"{BASE_URL}/pet/findByStatus", params={"status":"pending"}
