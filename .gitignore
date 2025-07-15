@@ -1,4 +1,3 @@
 .pytest_cache
 .venv
 *pycache*
-*conftest.py*
