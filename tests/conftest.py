@@ -11,10 +11,10 @@ def logging_send(self, *args, **kwargs):
     """Наш метод который перехватывает вызов и логирует и отдает результат"""
     response = original_send(self, *args, **kwargs)
 
-    logging.info(f"--- Request Sent ---")
+    logging.info("--- Request Sent ---")
     logging.info(f"URL: {response.request.url}")
     logging.info(f"Method: {response.request.method}")
-    logging.info(f"--- Response Received ---")
+    logging.info("--- Response Received ---")
     logging.info(f"Status Code: {response.status_code}")
     try:
         response_json = response.json()
